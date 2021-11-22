@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: spockmonsterpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spockmonsterpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: spockmonsterpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: spockmonsterpipelinesjavascriptdocker 
+          image: mikerainsacr.azurecr.io/spockmonsterpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
